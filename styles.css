@@ -1,0 +1,507 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+
+:root {
+  /* =========================================================
+     COLORS
+     ========================================================= */
+
+  --bg: #d8d8d8;
+  --background-text: #c5c5c5;
+  --text: #4a494a;
+  --hover: #a0a0a0;
+  --focus: #b7b7b7;
+  --red: #e23030;
+
+
+  /* =========================================================
+     HOMEPAGE
+     ========================================================= */
+
+  --hero-width: 672px;
+  --hero-height: 840px;
+  --page-height: 880px;
+
+
+  /* =========================================================
+     TYPOGRAPHY
+     ========================================================= */
+
+  --font-name: 24px;
+  --font-background: 86.4px;
+  --font-me: 74.4px;
+  --font-menu: 26.4px;
+
+
+  /* =========================================================
+     LAYOUT
+     ========================================================= */
+
+  --link-gap: 5.6px;
+
+  --content-gap: 16px;
+  --content-padding: 40px;
+
+  --masonry-columns: 4;
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 900;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+
+/* =========================================================
+   HOMEPAGE
+   ========================================================= */
+
+.page {
+  position: relative;
+  width: 100%;
+  min-width: 1080px;
+  min-height: var(--page-height);
+}
+
+.hero {
+  position: relative;
+  top: 40px;
+  left: 50%;
+  width: var(--hero-width);
+  height: var(--hero-height);
+  transform: translateX(-50%);
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logo {
+  position: absolute;
+  top: -40px;
+  left: 49%;
+  z-index: 5;
+
+  width: 84.8px;
+  height: 238.4px;
+
+  transform: translateX(-50%);
+}
+
+.logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   NAME
+   ========================================================= */
+
+.name {
+  position: absolute;
+  top: 202px;
+  left: 50%;
+  z-index: 5;
+
+  transform: translateX(-50%);
+
+  color: var(--red);
+  white-space: nowrap;
+
+  font-size: var(--font-name);
+  line-height: 1;
+  letter-spacing: -0.96px;
+}
+
+
+/* =========================================================
+   BACKGROUND TYPOGRAPHY
+   ========================================================= */
+
+.background-word {
+  position: absolute;
+  left: 50%;
+  z-index: 1;
+
+  transform: translateX(-50%);
+
+  color: var(--background-text);
+  white-space: nowrap;
+
+  user-select: none;
+  pointer-events: none;
+
+  font-size: var(--font-background);
+  line-height: 0.86;
+  letter-spacing: 1.2px;
+}
+
+.background-me {
+  top: 180.4px;
+  font-size: var(--font-me);
+}
+
+.background-design {
+  top: 296.4px;
+}
+
+.background-artwork {
+  top: 423.6px;
+}
+
+.background-work {
+  top: 546.8px;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.menu {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+}
+
+.menu-group {
+  position: absolute;
+  left: 50%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transform: translateX(-50%);
+}
+
+.menu-group a {
+  display: block;
+
+  color: var(--text);
+  text-decoration: none;
+  white-space: nowrap;
+
+  font-size: var(--font-menu);
+  line-height: 1;
+  letter-spacing: -1.44px;
+
+  transition: color 0.15s ease;
+}
+
+.menu-group a + a {
+  margin-top: var(--link-gap);
+}
+
+.menu-group a:hover,
+.menu-group a:focus-visible {
+  color: var(--hover);
+}
+
+.menu-group a:focus-visible {
+  outline: 2.4px solid var(--focus);
+  outline-offset: 3.2px;
+}
+
+
+/* Navigation positions */
+
+.menu-design {
+  top: 287.2px;
+}
+
+.menu-artwork {
+  top: 431.2px;
+}
+
+.menu-work {
+  top: 553.6px;
+}
+
+
+/* =========================================================
+   SUBPAGES
+   ========================================================= */
+
+.subpage {
+  position: relative;
+  min-height: 100vh;
+
+  padding: 40px var(--content-padding) 60px;
+}
+
+.subpage-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 20px;
+
+  width: 100%;
+  margin: 0 0 28px;
+
+  white-space: nowrap;
+}
+
+.subpage-back {
+  display: inline-block;
+
+  color: var(--red);
+  text-decoration: none;
+
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: -0.96px;
+
+  transition: color 0.15s ease;
+}
+
+.subpage-title {
+  display: inline-block;
+
+  color: var(--text);
+
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: -0.96px;
+}
+
+.subpage-back:hover,
+.subpage-back:focus-visible {
+  color: var(--hover);
+}
+
+.subpage-back:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 4px;
+}
+
+
+/* =========================================================
+   TRUE CSS-ONLY MASONRY
+   ========================================================= */
+
+/*
+   The masonry section itself is a 4-column grid.
+
+   Each column is an independent vertical flex stack.
+   This gives true masonry behavior without JavaScript:
+   - exactly 4 columns
+   - each column flows independently
+   - no row alignment
+   - gaps are naturally filled
+*/
+
+.masonry {
+  display: grid;
+
+  grid-template-columns:
+    repeat(var(--masonry-columns), minmax(0, 1fr));
+
+  gap: 0 var(--content-gap);
+
+  width: 100%;
+  margin: 0;
+}
+
+
+/* Individual masonry columns */
+
+.masonry-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--content-gap);
+
+  min-width: 0;
+}
+
+
+/* Individual project */
+
+.masonry-item {
+  display: block;
+
+  width: 100%;
+  margin: 0;
+
+  background: transparent;
+}
+
+
+/* Images */
+
+.masonry-item img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  border: 0;
+}
+
+
+/* Caption */
+
+.masonry-caption {
+  padding: 12px 0 14px;
+}
+
+
+/* Project title */
+
+.masonry-title {
+  margin: 0 0 6px;
+
+  color: var(--text);
+
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 400;
+
+  font-size: 21.6px;
+  line-height: 1.05;
+  letter-spacing: -0.7px;
+}
+
+
+/* Project description */
+
+.masonry-description {
+  margin: 0;
+
+  color: var(--text);
+
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 400;
+
+  font-size: 14.4px;
+  line-height: 1.25;
+  letter-spacing: -0.25px;
+}
+
+
+/* =========================================================
+   TEXT PAGES
+   ========================================================= */
+
+.text-content {
+  width: min(760px, 100%);
+  margin: 100px auto 0;
+
+  color: var(--text);
+}
+
+.text-content p {
+  margin: 0 0 20px;
+
+  font-size: 18px;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  :root {
+    --masonry-columns: 2;
+  }
+}
+
+
+/* =========================================================
+   PHONE
+   ========================================================= */
+
+@media (max-width: 899px) {
+
+  .page {
+    min-width: 0;
+    min-height: 0;
+    height: var(--page-height);
+  }
+
+  .hero {
+    top: 32px;
+
+    width: var(--hero-width);
+    height: var(--hero-height);
+
+    transform:
+      translateX(-50%)
+      scale(min(calc(100vw / var(--hero-width)), 1));
+
+    transform-origin: top center;
+  }
+
+
+  /* Subpage */
+
+  .subpage {
+    padding: 32px 16px 40px;
+  }
+
+  .subpage-header {
+    gap: 16px;
+    margin-bottom: 22px;
+  }
+
+  .subpage-back,
+  .subpage-title {
+    font-size: 19.2px;
+    letter-spacing: -0.768px;
+  }
+
+
+  /* One masonry column on phone */
+
+  :root {
+    --masonry-columns: 1;
+  }
+
+  .masonry-column {
+    gap: 16px;
+  }
+
+  .masonry-title {
+    font-size: 19.2px;
+  }
+
+  .masonry-description {
+    font-size: 13.2px;
+  }
+
+
+  /* Text pages */
+
+  .text-content {
+    margin-top: 70px;
+  }
+
+  .text-content p {
+    font-size: 16px;
+  }
+}
