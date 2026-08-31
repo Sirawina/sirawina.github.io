@@ -438,27 +438,41 @@ body {
 
 @media (max-width: 899px) {
 
+  /* =======================================================
+     HOMEPAGE — MOBILE
+     ======================================================= */
+
   .page {
+    position: relative;
+
+    width: 100%;
     min-width: 0;
-    min-height: 0;
-    height: var(--page-height);
+    min-height: 100vh;
+    height: 100vh;
+
+    overflow: hidden;
   }
 
   .hero {
+    position: absolute;
+
     top: 32px;
+    left: 50%;
 
     width: var(--hero-width);
     height: var(--hero-height);
 
     transform:
       translateX(-50%)
-      scale(min(calc(100vw / var(--hero-width)), 1));
+      scale(calc(100vw / var(--hero-width)));
 
     transform-origin: top center;
   }
 
 
-  /* Subpage */
+  /* =======================================================
+     SUBPAGE
+     ======================================================= */
 
   .subpage {
     padding: 32px 16px 40px;
@@ -476,7 +490,9 @@ body {
   }
 
 
-  /* One masonry column on phone */
+  /* =======================================================
+     MASONRY
+     ======================================================= */
 
   :root {
     --masonry-columns: 1;
@@ -495,7 +511,9 @@ body {
   }
 
 
-  /* Text pages */
+  /* =======================================================
+     TEXT PAGES
+     ======================================================= */
 
   .text-content {
     margin-top: 70px;
