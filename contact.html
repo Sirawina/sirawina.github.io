@@ -5,77 +5,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MILOŠ ŽIVKOVIĆ - CONTACT</title>
   <link rel="stylesheet" href="./styles.css">
+
   <style>
-html, body {
-  width: 100%;
-  min-height: 100%;
-  margin: 0;
-}
+    html, body {
+      width: 100%;
+      min-height: 100%;
+      margin: 0;
+    }
 
-body {
-  min-height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
+    
 
-.subpage {
-  min-height: 100vh;
-  position: relative;
-  padding-top: 40px;
-  text-align: center;
-  white-space: nowrap;
-}
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
 
-.subpage-back {
-  display: inline-block;
-  color: #4a494a;
-  text-decoration: none;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: -0.96px;
-  transition: color 0.15s ease;
-}
+      margin-top: 60px;
 
-.subpage-title {
-  display: inline-block;
-  margin-left: 20px;
-  color: #e23030;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: -0.96px;
-}
+      color: #4a494a;
 
-.subpage-back:hover,
-.subpage-back:focus-visible {
-  color: #a0a0a0;
-}
+      font-family: "Courier New Bold", Courier, monospace;
+      font-size: 20px;
+      line-height: 1.2;
+      font-weight: 800;
 
-.subpage-back:focus-visible {
-  outline: 2px solid #b7b7b7;
-  outline-offset: 4px;
-}
+      white-space: nowrap;
+    }
 
-@media (max-width: 899px) {
-  .subpage {
-    padding-top: 32px;
-  }
+    @media (max-width: 899px) {
+      .subpage {
+        padding-top: 32px;
+      }
 
-  .subpage-back,
-  .subpage-title {
-    font-size: 19.2px;
-    letter-spacing: -0.768px;
-  }
+      .subpage-back,
+      .subpage-title {
+        font-size: 19.2px;
+        letter-spacing: -0.768px;
+      }
 
-  .subpage-title {
-    margin-left: 16px;
-  }
-}
-</style>
+      .subpage-title {
+        margin-left: 16px;
+      }
+
+      .contact-links {
+        margin-top: 60px;
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
+
 <body>
   <main class="subpage">
-    <a class="subpage-back" href="./">MILOŠ ŽIVKOVIĆ</a>
-    <span class="subpage-title">CONTACT</span>
+  
+    <header class="subpage-header">
+
+      <a
+        class="subpage-back"
+        href="./"
+      >
+        MILOŠ ŽIVKOVIĆ
+      </a>
+
+      <span class="subpage-title">
+        CONTACT
+      </span>
+
+    </header>
+
+    <div class="contact-links">
+      <div>mail:miloskzivkovic@gmail.com</div>
+      <div>in:@sirawina</div>
+      <div>ig:@sirawina</div>
+    </div>
+
   </main>
 </body>
 </html>
