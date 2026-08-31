@@ -37,11 +37,23 @@
      ========================================================= */
 
   --link-gap: 5.6px;
-
   --content-gap: 16px;
   --content-padding: 40px;
 
   --masonry-columns: 4;
+
+
+  /* =========================================================
+     MOBILE HOMEPAGE POSITION
+     =========================================================
+
+     Change this value to move the homepage horizontally.
+
+     Negative = left
+     Positive = right
+  */
+
+  --mobile-hero-x: 0px;
 }
 
 
@@ -60,11 +72,17 @@ body {
   margin: 0;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background: var(--bg);
   color: var(--text);
+
   font-family: "Montserrat", Arial, sans-serif;
   font-weight: 900;
+
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -76,17 +94,23 @@ body {
 
 .page {
   position: relative;
+
   width: 100%;
   min-width: 1080px;
   min-height: var(--page-height);
+
+  overflow: hidden;
 }
 
 .hero {
   position: relative;
+
   top: 40px;
   left: 50%;
+
   width: var(--hero-width);
   height: var(--hero-height);
+
   transform: translateX(-50%);
 }
 
@@ -97,6 +121,7 @@ body {
 
 .logo {
   position: absolute;
+
   top: -40px;
   left: 49%;
   z-index: 5;
@@ -109,8 +134,10 @@ body {
 
 .logo img {
   display: block;
+
   width: 100%;
   height: 100%;
+
   object-fit: contain;
 }
 
@@ -121,6 +148,7 @@ body {
 
 .name {
   position: absolute;
+
   top: 202px;
   left: 50%;
   z-index: 5;
@@ -142,6 +170,7 @@ body {
 
 .background-word {
   position: absolute;
+
   left: 50%;
   z-index: 1;
 
@@ -188,6 +217,7 @@ body {
 
 .menu-group {
   position: absolute;
+
   left: 50%;
 
   display: flex;
@@ -247,6 +277,8 @@ body {
 
 .subpage {
   position: relative;
+
+  width: 100%;
   min-height: 100vh;
 
   padding: 40px var(--content-padding) 60px;
@@ -254,8 +286,10 @@ body {
 
 .subpage-header {
   display: flex;
+
   align-items: baseline;
   justify-content: center;
+
   gap: 20px;
 
   width: 100%;
@@ -299,19 +333,8 @@ body {
 
 
 /* =========================================================
-   TRUE CSS-ONLY MASONRY
+   CSS GRID MASONRY
    ========================================================= */
-
-/*
-   The masonry section itself is a 4-column grid.
-
-   Each column is an independent vertical flex stack.
-   This gives true masonry behavior without JavaScript:
-   - exactly 4 columns
-   - each column flows independently
-   - no row alignment
-   - gaps are naturally filled
-*/
 
 .masonry {
   display: grid;
@@ -319,25 +342,20 @@ body {
   grid-template-columns:
     repeat(var(--masonry-columns), minmax(0, 1fr));
 
-  gap: 0 var(--content-gap);
+  column-gap: var(--content-gap);
 
   width: 100%;
   margin: 0;
 }
 
-
-/* Individual masonry columns */
-
 .masonry-column {
   display: flex;
+
   flex-direction: column;
   gap: var(--content-gap);
 
   min-width: 0;
 }
-
-
-/* Individual project */
 
 .masonry-item {
   display: block;
@@ -348,9 +366,6 @@ body {
   background: transparent;
 }
 
-
-/* Images */
-
 .masonry-item img {
   display: block;
 
@@ -360,15 +375,9 @@ body {
   border: 0;
 }
 
-
-/* Caption */
-
 .masonry-caption {
   padding: 12px 0 14px;
 }
-
-
-/* Project title */
 
 .masonry-title {
   margin: 0 0 6px;
@@ -382,9 +391,6 @@ body {
   line-height: 1.05;
   letter-spacing: -0.7px;
 }
-
-
-/* Project description */
 
 .masonry-description {
   margin: 0;
@@ -435,39 +441,41 @@ body {
 /* =========================================================
    PHONE
    ========================================================= */
-
 @media (max-width: 899px) {
 
-  /* =======================================================
-     HOMEPAGE — FIXED-WIDTH / HORIZONTALLY SCROLLABLE
-     ======================================================= */
+.page {
+    position: fixed;
+    inset: 0;
 
-  .page {
-    width: var(--hero-width);
-    min-width: var(--hero-width);
-    min-height: var(--page-height);
+    width: 100vw;
+    height: 100vh;
+
+    min-width: 0;
+    min-height: 0;
+
+    overflow: hidden;
   }
 
-  .hero {
+.hero {
     position: relative;
 
-    top: 32px;
-    left: 50%;
+    width: 100%;
+    min-width: 0;
+    min-height: 100vh;
 
-    width: var(--hero-width);
-    height: var(--hero-height);
-
-    transform: translateX(-50%);
+    padding: 32px 16px 40px;\
   }
-
 
   /* =======================================================
      SUBPAGES
      ======================================================= */
 
   .subpage {
+    position: relative;
+
     width: 100%;
     min-width: 0;
+    min-height: 100vh;
 
     padding: 32px 16px 40px;
   }
