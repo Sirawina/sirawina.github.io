@@ -22,6 +22,31 @@
       min-width: 0;
     }
 
+    /* IMAGE LIGHTBOX */
+
+    .image-lightbox {
+      display: none;
+    }
+
+    .image-lightbox:target {
+      display: flex;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.75);
+    }
+
+    .image-lightbox img {
+      display: block;
+      max-width: 90vw;
+      max-height: 90vh;
+      width: auto;
+      height: auto;
+      cursor: zoom-out;
+    }
+
     @media (max-width: 899px) {
       .masonry {
         grid-template-columns: 1fr;
@@ -62,10 +87,12 @@
 
         <article class="masonry-item">
 
-          <img
-            src="./dummy.png"
-            alt="PROJECT TITLE"
-          >
+          <a href="#image-1">
+            <img
+              src="./dummy.png"
+              alt="PROJECT TITLE"
+            >
+          </a>
 
           <div class="masonry-caption">
 
@@ -82,10 +109,12 @@
 
         <article class="masonry-item">
 
-          <img
-            src="./dummy.png"
-            alt="ANOTHER PROJECT"
-          >
+          <a href="#image-2">
+            <img
+              src="./dummy.png"
+              alt="ANOTHER PROJECT"
+            >
+          </a>
 
           <div class="masonry-caption">
 
@@ -102,10 +131,12 @@
 
         <article class="masonry-item">
 
-          <img
-            src="./dummy.png"
-            alt="PROJECT NAME"
-          >
+          <a href="#image-3">
+            <img
+              src="./dummy.png"
+              alt="PROJECT NAME"
+            >
+          </a>
 
           <div class="masonry-caption">
 
@@ -130,10 +161,12 @@
 
         <article class="masonry-item">
 
-          <img
-            src="./dummy.png"
-            alt="IDENTITY DESIGN"
-          >
+          <a href="#image-4">
+            <img
+              src="./dummy.png"
+              alt="IDENTITY DESIGN"
+            >
+          </a>
 
           <div class="masonry-caption">
 
@@ -150,10 +183,12 @@
 
         <article class="masonry-item">
 
-          <img
-            src="./dummy.png"
-            alt="EDITORIAL PROJECT"
-          >
+          <a href="#image-5">
+            <img
+              src="./dummy.png"
+              alt="EDITORIAL PROJECT"
+            >
+          </a>
 
           <div class="masonry-caption">
 
@@ -178,10 +213,12 @@
 
         <article class="masonry-item">
 
-          <img
-            src="./dummy.png"
-            alt="POSTER SERIES"
-          >
+          <a href="#image-6">
+            <img
+              src="./dummy.png"
+              alt="POSTER SERIES"
+            >
+          </a>
 
           <div class="masonry-caption">
 
@@ -198,10 +235,12 @@
 
         <article class="masonry-item">
 
-          <img
-            src="./dummy.png"
-            alt="ART DIRECTION"
-          >
+          <a href="#image-7">
+            <img
+              src="./dummy.png"
+              alt="ART DIRECTION"
+            >
+          </a>
 
           <div class="masonry-caption">
 
@@ -218,10 +257,12 @@
 
         <article class="masonry-item">
 
-          <img
-            src="./dummy.png"
-            alt="EXHIBITION"
-          >
+          <a href="#image-8">
+            <img
+              src="./dummy.png"
+              alt="EXHIBITION"
+            >
+          </a>
 
           <div class="masonry-caption">
 
@@ -238,10 +279,12 @@
 
         <article class="masonry-item">
 
-          <img
-            src="./dummy.png"
-            alt="VISUAL SYSTEM"
-          >
+          <a href="#image-9">
+            <img
+              src="./dummy.png"
+              alt="VISUAL SYSTEM"
+            >
+          </a>
 
           <div class="masonry-caption">
 
@@ -258,10 +301,12 @@
 
         <article class="masonry-item">
 
-          <img
-            src="./dummy.png"
-            alt="VISUAL SYSTEM"
-          >
+          <a href="#image-10">
+            <img
+              src="./dummy.png"
+              alt="VISUAL SYSTEM"
+            >
+          </a>
 
           <div class="masonry-caption">
 
@@ -301,6 +346,69 @@
     </a>
 
   </main>
+
+
+  <!-- IMAGE LIGHTBOXES -->
+
+  <div class="image-lightbox" id="image-1">
+    <a href="#">
+      <img src="./dummy.png" alt="PROJECT TITLE">
+    </a>
+  </div>
+
+  <div class="image-lightbox" id="image-2">
+    <a href="#">
+      <img src="./dummy.png" alt="ANOTHER PROJECT">
+    </a>
+  </div>
+
+  <div class="image-lightbox" id="image-3">
+    <a href="#">
+      <img src="./dummy.png" alt="PROJECT NAME">
+    </a>
+  </div>
+
+  <div class="image-lightbox" id="image-4">
+    <a href="#">
+      <img src="./dummy.png" alt="IDENTITY DESIGN">
+    </a>
+  </div>
+
+  <div class="image-lightbox" id="image-5">
+    <a href="#">
+      <img src="./dummy.png" alt="EDITORIAL PROJECT">
+    </a>
+  </div>
+
+  <div class="image-lightbox" id="image-6">
+    <a href="#">
+      <img src="./dummy.png" alt="POSTER SERIES">
+    </a>
+  </div>
+
+  <div class="image-lightbox" id="image-7">
+    <a href="#">
+      <img src="./dummy.png" alt="ART DIRECTION">
+    </a>
+  </div>
+
+  <div class="image-lightbox" id="image-8">
+    <a href="#">
+      <img src="./dummy.png" alt="EXHIBITION">
+    </a>
+  </div>
+
+  <div class="image-lightbox" id="image-9">
+    <a href="#">
+      <img src="./dummy.png" alt="VISUAL SYSTEM">
+    </a>
+  </div>
+
+  <div class="image-lightbox" id="image-10">
+    <a href="#">
+      <img src="./dummy.png" alt="VISUAL SYSTEM">
+    </a>
+  </div>
 
 </body>
 </html>
