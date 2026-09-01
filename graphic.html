@@ -1,18 +1,31 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>MILOŠ ŽIVKOVIĆ - GRAPHIC</title>
   <link rel="icon" type="image/png" href="favicon.png">
-
   <link rel="stylesheet" href="./styles.css">
 
   <style>
     .masonry {
-      --masonry-columns: 3;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      column-gap: 16px;
+      width: 100%;
+    }
+
+    .masonry-column {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      min-width: 0;
+    }
+
+    @media (max-width: 899px) {
+      .masonry {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -43,121 +56,249 @@
     >
 
 
-      <!-- ==================== COLUMN 1 START ==================== -->
+      <!-- START COLUMN 1 -->
 
       <div class="masonry-column">
 
         <article class="masonry-item">
-          <img src="./dummy.png" alt="PROJECT TITLE">
+
+          <img
+            src="./dummy.png"
+            alt="PROJECT TITLE"
+          >
 
           <div class="masonry-caption">
+
             <h2 class="masonry-title"></h2>
-            <p class="masonry-description">loric epsumic</p>
+
+            <p class="masonry-description">
+              loric epsumic
+            </p>
+
           </div>
+
         </article>
 
+
         <article class="masonry-item">
-          <img src="./dummy.png" alt="ANOTHER PROJECT">
+
+          <img
+            src="./dummy.png"
+            alt="ANOTHER PROJECT"
+          >
 
           <div class="masonry-caption">
+
             <h2 class="masonry-title"></h2>
-            <p class="masonry-description">loric epsumic</p>
+
+            <p class="masonry-description">
+              loric epsumic
+            </p>
+
           </div>
+
         </article>
 
+
         <article class="masonry-item">
-          <img src="./dummy.png" alt="PROJECT NAME">
+
+          <img
+            src="./dummy.png"
+            alt="PROJECT NAME"
+          >
 
           <div class="masonry-caption">
+
             <h2 class="masonry-title"></h2>
-            <p class="masonry-description">loric epsumic</p>
+
+            <p class="masonry-description">
+              loric epsumic
+            </p>
+
           </div>
+
         </article>
 
       </div>
 
-      <!-- ==================== COLUMN 1 END ==================== -->
+      <!-- END COLUMN 1 -->
 
 
-      <!-- ==================== COLUMN 2 START ==================== -->
+      <!-- START COLUMN 2 -->
 
       <div class="masonry-column">
 
         <article class="masonry-item">
-          <img src="./dummy.png" alt="IDENTITY DESIGN">
+
+          <img
+            src="./dummy.png"
+            alt="IDENTITY DESIGN"
+          >
 
           <div class="masonry-caption">
+
             <h2 class="masonry-title"></h2>
-            <p class="masonry-description">loric epsumic</p>
+
+            <p class="masonry-description">
+              loric epsumic
+            </p>
+
           </div>
+
         </article>
 
+
         <article class="masonry-item">
-          <img src="./dummy.png" alt="EDITORIAL PROJECT">
+
+          <img
+            src="./dummy.png"
+            alt="EDITORIAL PROJECT"
+          >
 
           <div class="masonry-caption">
+
             <h2 class="masonry-title"></h2>
-            <p class="masonry-description">loric epsumic.</p>
+
+            <p class="masonry-description">
+              loric epsumic.
+            </p>
+
           </div>
+
         </article>
 
       </div>
 
-      <!-- ==================== COLUMN 2 END ==================== -->
+      <!-- END COLUMN 2 -->
 
 
-      <!-- ==================== COLUMN 3 START ==================== -->
+      <!-- START COLUMN 3 -->
 
       <div class="masonry-column">
 
         <article class="masonry-item">
-          <img src="./dummy.png" alt="POSTER SERIES">
+
+          <img
+            src="./dummy.png"
+            alt="POSTER SERIES"
+          >
 
           <div class="masonry-caption">
+
             <h2 class="masonry-title"></h2>
-            <p class="masonry-description">loric epsumic</p>
+
+            <p class="masonry-description">
+              loric epsumic
+            </p>
+
           </div>
+
         </article>
 
+
         <article class="masonry-item">
-          <img src="./dummy.png" alt="ART DIRECTION">
+
+          <img
+            src="./dummy.png"
+            alt="ART DIRECTION"
+          >
 
           <div class="masonry-caption">
+
             <h2 class="masonry-title"></h2>
-            <p class="masonry-description">loric epsumic</p>
+
+            <p class="masonry-description">
+              loric epsumic
+            </p>
+
           </div>
+
         </article>
 
+
         <article class="masonry-item">
-          <img src="./dummy.png" alt="EXHIBITION">
+
+          <img
+            src="./dummy.png"
+            alt="EXHIBITION"
+          >
 
           <div class="masonry-caption">
+
             <h2 class="masonry-title"></h2>
-            <p class="masonry-description">loric epsumic</p>
+
+            <p class="masonry-description">
+              loric epsumic
+            </p>
+
           </div>
+
+        </article>
+
+
+        <article class="masonry-item">
+
+          <img
+            src="./dummy.png"
+            alt="VISUAL SYSTEM"
+          >
+
+          <div class="masonry-caption">
+
+            <h2 class="masonry-title"></h2>
+
+            <p class="masonry-description">
+              loric epsumic
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="masonry-item">
+
+          <img
+            src="./dummy.png"
+            alt="VISUAL SYSTEM"
+          >
+
+          <div class="masonry-caption">
+
+            <h2 class="masonry-title"></h2>
+
+            <p class="masonry-description">
+              loric epsumic
+            </p>
+
+          </div>
+
         </article>
 
       </div>
 
-      <!-- ==================== COLUMN 3 END ==================== -->
+      <!-- END COLUMN 3 -->
 
-
-      <a
-        href="#"
-        style="
-          position: fixed;
-          left: 50%;
-          bottom: 20px;
-          transform: translateX(-50%);
-          font-family: 'Montserrat', Arial, sans-serif;
-          color: #4a494a;
-          text-decoration: none;
-          font-weight: 900;
-          font-size: 20px;
-        "
-      >TOP</a>
 
     </section>
+
+
+    <a
+      href="#"
+      style="
+        position: fixed;
+        left: 50%;
+        bottom: 20px;
+        transform: translateX(-50%);
+        font-family: 'Montserrat', Arial, sans-serif;
+        color: #4a494a;
+        text-decoration: none;
+        font-weight: 900;
+        font-size: 20px;
+      "
+    >
+      TOP
+    </a>
 
   </main>
 
