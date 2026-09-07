@@ -44,38 +44,26 @@ overflow-x: hidden;
 overflow-y: auto;
 }
 
+/* =========================
+HOMEPAGE
+========================= */
+
 .page {
 position: relative;
 width: 100%;
-min-width: 1080px;
-min-height: var(--page-height);
+min-width: 0;
+min-height: 100vh;
 overflow: hidden;
 }
 
 .hero {
-position: relative;
-top: 40px;
+position: absolute;
+top: 50%;
 left: 50%;
 width: var(--hero-width);
 height: var(--hero-height);
-transform: translateX(-50%) scale(1.5);
-}
-
-.logo {
-position: absolute;
-top: -40px;
-left: 49%;
-z-index: 5;
-width: 84.8px;
-height: 238.4px;
-transform: translateX(-50%);
-}
-
-.logo img {
-display: block;
-width: 100%;
-height: 100%;
-object-fit: contain;
+transform: translate(-50%, -50%) scale(1.4);
+transform-origin: center center;
 }
 
 /* =========================
@@ -120,7 +108,7 @@ BACKGROUND WORD IMAGES
 
 .background-word {
 position: absolute;
-left: 50%;
+left: calc(70% - 35px);
 z-index: 1;
 display: block;
 width: auto;
@@ -146,17 +134,14 @@ height: var(--font-me);
 
 .background-design {
 top: 267px;
-left: 65%;
 }
 
 .background-artwork {
 top: 371px;
-left: 65%;
 }
 
 .background-work {
 top: 470px;
-left: 65%;
 }
 
 /* =========================
@@ -361,23 +346,36 @@ MOBILE
 @media (max-width: 899px) {
 
 .page {
-position: fixed;
-inset: 0;
+position: relative;
 width: 100vw;
 height: 100vh;
 min-width: 0;
-min-height: 0;
+min-height: 100vh;
 overflow: hidden;
 }
 
+/*
+The homepage remains one fixed 672 × 840 composition.
+Only the composition itself is scaled and centered.
+No individual homepage element gets a different mobile
+position or scale.
+*/
 .hero {
-position: relative;
-width: 100%;
-min-width: 0;
-min-height: 100vh;
-padding: 32px 16px 40px;
+position: absolute;
+top: 50%;
+left: 50%;
+width: var(--hero-width);
+height: var(--hero-height);
+padding: 0;
+transform:
+translate(-50%, -50%)
+scale(min(1.4, calc(100vw / 672px), calc(100vh / 840px)));
+transform-origin: center center;
 }
 
+/*
+Subpages remain independently responsive.
+*/
 .subpage {
 position: relative;
 width: 100%;
@@ -419,27 +417,5 @@ margin-top: 70px;
 
 .text-content p {
 font-size: 16px;
-}
-
-/* Keep image-based homepage text proportional on mobile */
-
-.background-word {
-height: var(--font-background);
-}
-
-.background-word img {
-height: 100%;
-}
-
-.background-me {
-height: var(--font-me);
-}
-
-.menu-group a {
-height: var(--font-menu);
-}
-
-.menu-group a img {
-height: var(--font-menu);
 }
 }
