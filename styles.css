@@ -1,5 +1,5 @@
 :root {
---bg: #d8d8d8;
+--bg: #ffffff;
 --background-text: #c5c5c5;
 --text: #4a494a;
 --hover: #a0a0a0;
@@ -145,18 +145,18 @@ height: var(--font-me);
 }
 
 .background-design {
-top: 296.4px;
-left: 75%;
+top: 267px;
+left: 65%;
 }
 
 .background-artwork {
-top: 423.6px;
-left: 75%;
+top: 371px;
+left: 65%;
 }
 
 .background-work {
-top: 546.8px;
-left: 75%;
+top: 470px;
+left: 65%;
 }
 
 /* =========================
@@ -171,11 +171,11 @@ z-index: 10;
 
 .menu-group {
 position: absolute;
-left: 50%;
+left: calc(50% - 120px);
 display: flex;
 flex-direction: column;
-align-items: center;
-transform: translateX(-50%);
+align-items: left;
+transform: none;
 }
 
 .menu-group a {
@@ -214,11 +214,11 @@ top: 267px;
 }
 
 .menu-artwork {
-top: 371px;
+top: 385px;
 }
 
 .menu-work {
-top: 450px;
+top: 485px;
 }
 
 /* =========================
