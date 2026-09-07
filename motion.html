@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -20,6 +21,52 @@
       flex-direction: column;
       gap: 16px;
       min-width: 0;
+    }
+
+    /* IMAGE-BASED SUBPAGE HEADER */
+
+    .subpage-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      width: 100%;
+      margin: 0 0 28px;
+      white-space: nowrap;
+    }
+
+    .subpage-back {
+      display: block;
+      line-height: 0;
+    }
+
+    .subpage-back img {
+      display: block;
+      width: auto;
+      height: 34px;
+      max-width: none;
+    }
+
+    .subpage-title {
+      display: block;
+      line-height: 0;
+    }
+
+    .subpage-title img {
+      display: block;
+      width: auto;
+      height: 34px;
+      max-width: none;
+    }
+
+    .subpage-back:hover,
+    .subpage-back:focus-visible {
+      opacity: 0.65;
+    }
+
+    .subpage-back:focus-visible {
+      outline: 2px solid var(--focus);
+      outline-offset: 4px;
     }
 
     /* IMAGE LIGHTBOX */
@@ -56,468 +103,261 @@
       cursor: zoom-in;
     }
 
+    .top-link {
+      position: fixed;
+      left: 50%;
+      bottom: 20px;
+      transform: translateX(-50%);
+      display: block;
+      line-height: 0;
+    }
+
+    .top-link img {
+      display: block;
+      width: auto;
+      height: 20px;
+      max-width: none;
+    }
+
     @media (max-width: 899px) {
       .masonry {
         grid-template-columns: 1fr;
       }
+
+      .subpage-header {
+        gap: 16px;
+        margin-bottom: 22px;
+      }
+
+      .subpage-back img,
+      .subpage-title img {
+        height: 39.2px;
+      }
     }
   </style>
+
 </head>
 
 <body>
 
   <main class="subpage">
 
-    <header class="subpage-header">
+<header class="subpage-header">
 
-      <a
-        class="subpage-back"
-        href="./"
-      >
-        MILOŠ ŽIVKOVIĆ
-      </a>
-
-      <span class="subpage-title">
-        MOTION DESIGN
-      </span>
-
-    </header>
-
-
-    <section
-      class="masonry"
-      aria-label="MOTION DESIGN projects"
+  <a
+    class="subpage-back"
+    href="./"
+    aria-label="MILOŠ ŽIVKOVIĆ"
+  >
+    <img
+      src="./landing/milos.png"
+      alt="MILOŠ ŽIVKOVIĆ"
     >
-
-
-      <!-- START COLUMN 1 -->
-
-      <div class="masonry-column">
-
-        <article class="masonry-item">
-
-          <label for="image-1">
-            <img
-              src="./dummy.png"
-              alt="PROJECT TITLE"
-            >
-          </label>
-
-          <div class="masonry-caption">
-
-            <h2 class="masonry-title"></h2>
-
-            <p class="masonry-description">
-              loric epsumic
-            </p>
-
-          </div>
-
-        </article>
-
-
-        <article class="masonry-item">
-
-          <label for="image-2">
-            <img
-              src="./dummy.png"
-              alt="ANOTHER PROJECT"
-            >
-          </label>
-
-          <div class="masonry-caption">
-
-            <h2 class="masonry-title"></h2>
-
-            <p class="masonry-description">
-              loric epsumic
-            </p>
-
-          </div>
-
-        </article>
-
-
-        <article class="masonry-item">
-
-          <label for="image-3">
-            <img
-              src="./dummy.png"
-              alt="PROJECT NAME"
-            >
-          </label>
-
-          <div class="masonry-caption">
-
-            <h2 class="masonry-title"></h2>
-
-            <p class="masonry-description">
-              loric epsumic
-            </p>
-
-          </div>
-
-        </article>
-
-
-        <article class="masonry-item">
-
-          <label for="image-4">
-            <img
-              src="./dummy.png"
-              alt="IDENTITY DESIGN"
-            >
-          </label>
-
-          <div class="masonry-caption">
-
-            <h2 class="masonry-title"></h2>
-
-            <p class="masonry-description">
-              loric epsumic
-            </p>
-
-          </div>
-
-        </article>
-
-
-        <article class="masonry-item">
-
-          <label for="image-5">
-            <img
-              src="./dummy.png"
-              alt="EDITORIAL PROJECT"
-            >
-          </label>
-
-          <div class="masonry-caption">
-
-            <h2 class="masonry-title"></h2>
-
-            <p class="masonry-description">
-              loric epsumic
-            </p>
-
-          </div>
-
-        </article>
-
-      </div>
-
-      <!-- END COLUMN 1 -->
-
-
-      <!-- START COLUMN 2 -->
-
-      <div class="masonry-column">
-
-        <article class="masonry-item">
-
-          <label for="image-6">
-            <img
-              src="./dummy.png"
-              alt="POSTER SERIES"
-            >
-          </label>
-
-          <div class="masonry-caption">
-
-            <h2 class="masonry-title"></h2>
-
-            <p class="masonry-description">
-              loric epsumic
-            </p>
-
-          </div>
-
-        </article>
-
-
-        <article class="masonry-item">
-
-          <label for="image-7">
-            <img
-              src="./dummy.png"
-              alt="ART DIRECTION"
-            >
-          </label>
-
-          <div class="masonry-caption">
-
-            <h2 class="masonry-title"></h2>
-
-            <p class="masonry-description">
-              loric epsumic
-            </p>
-
-          </div>
-
-        </article>
-
-
-        <article class="masonry-item">
-
-          <label for="image-8">
-            <img
-              src="./dummy.png"
-              alt="EXHIBITION"
-            >
-          </label>
-
-          <div class="masonry-caption">
-
-            <h2 class="masonry-title"></h2>
-
-            <p class="masonry-description">
-              loric epsumic
-            </p>
-
-          </div>
-
-        </article>
-
-
-        <article class="masonry-item">
-
-          <label for="image-9">
-            <img
-              src="./dummy.png"
-              alt="VISUAL SYSTEM"
-            >
-          </label>
-
-          <div class="masonry-caption">
-
-            <h2 class="masonry-title"></h2>
-
-            <p class="masonry-description">
-              loric epsumic
-            </p>
-
-          </div>
-
-        </article>
-
-
-        <article class="masonry-item">
-
-          <label for="image-10">
-            <img
-              src="./dummy.png"
-              alt="VISUAL SYSTEM"
-            >
-          </label>
-
-          <div class="masonry-caption">
-
-            <h2 class="masonry-title"></h2>
-
-            <p class="masonry-description">
-              loric epsumic
-            </p>
-
-          </div>
-
-        </article>
-
-      </div>
-
-      <!-- END COLUMN 2 -->
-
-
-    </section>
-
-
-    <a
-      href="#"
-      style="
-        position: fixed;
-        left: 50%;
-        bottom: 20px;
-        transform: translateX(-50%);
-        font-family: 'Montserrat', Arial, sans-serif;
-        color: #4a494a;
-        text-decoration: none;
-        font-weight: 900;
-        font-size: 20px;
-      "
+  </a>
+
+  <span
+    class="subpage-title"
+    aria-label="MOTION DESIGN"
+  >
+    <img
+      src="./landing/motion.png"
+      alt="MOTION DESIGN"
     >
-      TOP
-    </a>
+  </span>
+
+</header>
+
+
+<section
+  class="masonry"
+  aria-label="MOTION DESIGN projects"
+>
+
+  <div class="masonry-column">
+
+    <article class="masonry-item">
+      <label for="image-1">
+        <img src="./dummy.png" alt="PROJECT TITLE">
+      </label>
+
+      <div class="masonry-caption">
+        <h2 class="masonry-title"></h2>
+        <p class="masonry-description">loric epsumic</p>
+      </div>
+    </article>
+
+    <article class="masonry-item">
+      <label for="image-2">
+        <img src="./dummy.png" alt="ANOTHER PROJECT">
+      </label>
+
+      <div class="masonry-caption">
+        <h2 class="masonry-title"></h2>
+        <p class="masonry-description">loric epsumic</p>
+      </div>
+    </article>
+
+    <article class="masonry-item">
+      <label for="image-3">
+        <img src="./dummy.png" alt="PROJECT NAME">
+      </label>
+
+      <div class="masonry-caption">
+        <h2 class="masonry-title"></h2>
+        <p class="masonry-description">loric epsumic</p>
+      </div>
+    </article>
+
+    <article class="masonry-item">
+      <label for="image-4">
+        <img src="./dummy.png" alt="IDENTITY DESIGN">
+      </label>
+
+      <div class="masonry-caption">
+        <h2 class="masonry-title"></h2>
+        <p class="masonry-description">loric epsumic</p>
+      </div>
+    </article>
+
+    <article class="masonry-item">
+      <label for="image-5">
+        <img src="./dummy.png" alt="EDITORIAL PROJECT">
+      </label>
+
+      <div class="masonry-caption">
+        <h2 class="masonry-title"></h2>
+        <p class="masonry-description">loric epsumic</p>
+      </div>
+    </article>
+
+  </div>
+
+
+  <div class="masonry-column">
+
+    <article class="masonry-item">
+      <label for="image-6">
+        <img src="./dummy.png" alt="POSTER SERIES">
+      </label>
+
+      <div class="masonry-caption">
+        <h2 class="masonry-title"></h2>
+        <p class="masonry-description">loric epsumic</p>
+      </div>
+    </article>
+
+    <article class="masonry-item">
+      <label for="image-7">
+        <img src="./dummy.png" alt="ART DIRECTION">
+      </label>
+
+      <div class="masonry-caption">
+        <h2 class="masonry-title"></h2>
+        <p class="masonry-description">loric epsumic</p>
+      </div>
+    </article>
+
+    <article class="masonry-item">
+      <label for="image-8">
+        <img src="./dummy.png" alt="EXHIBITION">
+      </label>
+
+      <div class="masonry-caption">
+        <h2 class="masonry-title"></h2>
+        <p class="masonry-description">loric epsumic</p>
+      </div>
+    </article>
+
+    <article class="masonry-item">
+      <label for="image-9">
+        <img src="./dummy.png" alt="VISUAL SYSTEM">
+      </label>
+
+      <div class="masonry-caption">
+        <h2 class="masonry-title"></h2>
+        <p class="masonry-description">loric epsumic</p>
+      </div>
+    </article>
+
+    <article class="masonry-item">
+      <label for="image-10">
+        <img src="./dummy.png" alt="VISUAL SYSTEM">
+      </label>
+
+      <div class="masonry-caption">
+        <h2 class="masonry-title"></h2>
+        <p class="masonry-description">loric epsumic</p>
+      </div>
+    </article>
+
+  </div>
+
+</section>
+
+
+<a
+  class="top-link"
+  href="#"
+  aria-label="TOP"
+>
+  <img
+    src="./landing/top.png"
+    alt="TOP"
+  >
+</a>
 
   </main>
 
-
   <!-- IMAGE LIGHTBOXES -->
 
-  <input
-    type="checkbox"
-    class="image-toggle"
-    id="image-1"
-  >
-
-  <label
-    class="image-lightbox"
-    for="image-1"
-  >
-    <img
-      src="./dummy.png"
-      alt="PROJECT TITLE"
-    >
+  <input type="checkbox" class="image-toggle" id="image-1">
+  <label class="image-lightbox" for="image-1">
+    <img src="./dummy.png" alt="PROJECT TITLE">
   </label>
 
-
-  <input
-    type="checkbox"
-    class="image-toggle"
-    id="image-2"
-  >
-
-  <label
-    class="image-lightbox"
-    for="image-2"
-  >
-    <img
-      src="./dummy.png"
-      alt="ANOTHER PROJECT"
-    >
+  <input type="checkbox" class="image-toggle" id="image-2">
+  <label class="image-lightbox" for="image-2">
+    <img src="./dummy.png" alt="ANOTHER PROJECT">
   </label>
 
-
-  <input
-    type="checkbox"
-    class="image-toggle"
-    id="image-3"
-  >
-
-  <label
-    class="image-lightbox"
-    for="image-3"
-  >
-    <img
-      src="./dummy.png"
-      alt="PROJECT NAME"
-    >
+  <input type="checkbox" class="image-toggle" id="image-3">
+  <label class="image-lightbox" for="image-3">
+    <img src="./dummy.png" alt="PROJECT NAME">
   </label>
 
-
-  <input
-    type="checkbox"
-    class="image-toggle"
-    id="image-4"
-  >
-
-  <label
-    class="image-lightbox"
-    for="image-4"
-  >
-    <img
-      src="./dummy.png"
-      alt="IDENTITY DESIGN"
-    >
+  <input type="checkbox" class="image-toggle" id="image-4">
+  <label class="image-lightbox" for="image-4">
+    <img src="./dummy.png" alt="IDENTITY DESIGN">
   </label>
 
-
-  <input
-    type="checkbox"
-    class="image-toggle"
-    id="image-5"
-  >
-
-  <label
-    class="image-lightbox"
-    for="image-5"
-  >
-    <img
-      src="./dummy.png"
-      alt="EDITORIAL PROJECT"
-    >
+  <input type="checkbox" class="image-toggle" id="image-5">
+  <label class="image-lightbox" for="image-5">
+    <img src="./dummy.png" alt="EDITORIAL PROJECT">
   </label>
 
-
-  <input
-    type="checkbox"
-    class="image-toggle"
-    id="image-6"
-  >
-
-  <label
-    class="image-lightbox"
-    for="image-6"
-  >
-    <img
-      src="./dummy.png"
-      alt="POSTER SERIES"
-    >
+  <input type="checkbox" class="image-toggle" id="image-6">
+  <label class="image-lightbox" for="image-6">
+    <img src="./dummy.png" alt="POSTER SERIES">
   </label>
 
-
-  <input
-    type="checkbox"
-    class="image-toggle"
-    id="image-7"
-  >
-
-  <label
-    class="image-lightbox"
-    for="image-7"
-  >
-    <img
-      src="./dummy.png"
-      alt="ART DIRECTION"
-    >
+  <input type="checkbox" class="image-toggle" id="image-7">
+  <label class="image-lightbox" for="image-7">
+    <img src="./dummy.png" alt="ART DIRECTION">
   </label>
 
-
-  <input
-    type="checkbox"
-    class="image-toggle"
-    id="image-8"
-  >
-
-  <label
-    class="image-lightbox"
-    for="image-8"
-  >
-    <img
-      src="./dummy.png"
-      alt="EXHIBITION"
-    >
+  <input type="checkbox" class="image-toggle" id="image-8">
+  <label class="image-lightbox" for="image-8">
+    <img src="./dummy.png" alt="EXHIBITION">
   </label>
 
-
-  <input
-    type="checkbox"
-    class="image-toggle"
-    id="image-9"
-  >
-
-  <label
-    class="image-lightbox"
-    for="image-9"
-  >
-    <img
-      src="./dummy.png"
-      alt="VISUAL SYSTEM"
-    >
+  <input type="checkbox" class="image-toggle" id="image-9">
+  <label class="image-lightbox" for="image-9">
+    <img src="./dummy.png" alt="VISUAL SYSTEM">
   </label>
 
-
-  <input
-    type="checkbox"
-    class="image-toggle"
-    id="image-10"
-  >
-
-  <label
-    class="image-lightbox"
-    for="image-10"
-  >
-    <img
-      src="./dummy.png"
-      alt="VISUAL SYSTEM"
-    >
+  <input type="checkbox" class="image-toggle" id="image-10">
+  <label class="image-lightbox" for="image-10">
+    <img src="./dummy.png" alt="VISUAL SYSTEM">
   </label>
 
 </body>

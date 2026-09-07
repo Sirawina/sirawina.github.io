@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -8,6 +9,40 @@
   <link rel="stylesheet" href="./styles.css">
 
   <style>
+    .subpage-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      width: 100%;
+      margin: 0 0 28px;
+      white-space: nowrap;
+    }
+
+    .subpage-back,
+    .subpage-title {
+      display: block;
+      line-height: 0;
+    }
+
+    .subpage-back img,
+    .subpage-title img {
+      display: block;
+      width: auto;
+      height: 34px;
+      max-width: none;
+    }
+
+    .subpage-back:hover,
+    .subpage-back:focus-visible {
+      opacity: 0.65;
+    }
+
+    .subpage-back:focus-visible {
+      outline: 2px solid var(--focus);
+      outline-offset: 4px;
+    }
+
     .masonry {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -29,7 +64,6 @@
       transform: translate(-50%, -50%);
       z-index: 100;
       color: #4a494a;
-      font-family: "Montserrat", Arial, sans-serif;
       font-size: 50px;
       font-weight: 900;
       line-height: 1;
@@ -37,6 +71,16 @@
     }
 
     @media (max-width: 899px) {
+      .subpage-header {
+        gap: 16px;
+        margin-bottom: 22px;
+      }
+
+      .subpage-back img,
+      .subpage-title img {
+        height: 39.2px;
+      }
+
       .masonry {
         grid-template-columns: 1fr;
       }
@@ -46,31 +90,42 @@
       }
     }
   </style>
+
 </head>
 
 <body>
 
   <main class="subpage">
 
-    <header class="subpage-header">
 
-      <a
-        class="subpage-back"
-        href="./"
-      >
-        MILOŠ ŽIVKOVIĆ
-      </a>
+<header class="subpage-header">
 
-      <span class="subpage-title">
-        3D DESIGN
-      </span>
+  <a
+    class="subpage-back"
+    href="./about"
+    aria-label="MILOŠ ŽIVKOVIĆ"
+  >
+    <img
+      src="./landing/milos.png"
+      alt="MILOŠ ŽIVKOVIĆ"
+    >
+  </a>
 
-    </header>
+  <span
+    class="subpage-title"
+    aria-label="3D DESIGN"
+  >
+    <img
+      src="./landing/3d.png"
+      alt="3D DESIGN"
+    >
+  </span>
 
+</header>
 
-    <div class="construction">
-      UNDER CONSTRUCTION 🛠️
-    </div>
+<div class="construction">
+  UNDER CONSTRUCTION 🛠️
+</div>
 
 
   </main>

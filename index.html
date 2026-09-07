@@ -1,51 +1,88 @@
 <!doctype html>
+
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MILOŠ ŽIVKOVIĆ</title>
   <link rel="icon" type="image/png" href="favicon.png">
-<link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
   <main class="page">
     <section class="hero">
 
-      <div class="logo" aria-hidden="true">
-        <img src="logo.png" alt="">
-      </div>
+```
+  <a class="name" href="./about" aria-label="MILOŠ ŽIVKOVIĆ">
+    <img src="landing/milos.png" alt="MILOŠ ŽIVKOVIĆ">
+  </a>
 
-      <div class="name">MILOŠ ŽIVKOVIĆ</div>
+  <!-- Decorative background images: never clickable -->
+  <div class="background-word background-me" aria-hidden="true">
+    <img src="landing/me.png" alt="">
+  </div>
 
-      <!-- Decorative background text: never clickable -->
-      <div class="background-word background-me" aria-hidden="true">ME</div>
-      <div class="background-word background-design" aria-hidden="true">DESIGN</div>
-      <div class="background-word background-artwork" aria-hidden="true">CRAFT</div>
-      <div class="background-word background-work" aria-hidden="true">WORK</div>
+  <div class="background-word background-design" aria-hidden="true">
+    <img src="landing/design.png" alt="">
+  </div>
 
-      <!-- Clickable navigation -->
-      <nav class="menu" aria-label="Main navigation">
+  <div class="background-word background-artwork" aria-hidden="true">
+    <img src="landing/art.png" alt="">
+  </div>
 
-        <div class="menu-group menu-design">
-          <a href="./graphic">GRAPHIC</a>
-          <a href="./motion">MOTION</a>
-          <a href="./3d">3D</a>
-        </div>
+  <div class="background-word background-work" aria-hidden="true">
+    <img src="landing/work.png" alt="">
+  </div>
 
-        <div class="menu-group menu-artwork">
-          <a href="./illustration">ILLUSTRATIONS</a>
-          <a href="./paintings">PAINTINGS</a>
-        </div>
+  <!-- Clickable navigation images -->
+  <nav class="menu" aria-label="Main navigation">
 
-        <div class="menu-group menu-work">
-          <a href="./about">ABOUT</a>
-          <a href="./contact">CONTACT</a>
-        </div>
+    <div class="menu-group menu-design">
 
-      </nav>
+      <a href="./graphic" aria-label="GRAPHIC">
+        <img src="landing/graphic.png" alt="GRAPHIC">
+      </a>
 
-    </section>
+      <a href="./motion" aria-label="MOTION">
+        <img src="landing/motion.png" alt="MOTION">
+      </a>
+
+      <a href="./3d" aria-label="3D">
+        <img src="landing/3d.png" alt="3D">
+      </a>
+
+    </div>
+
+    <div class="menu-group menu-artwork">
+
+      <a href="./illustration" aria-label="ILLUSTRATIONS">
+        <img src="landing/illustration.png" alt="ILLUSTRATIONS">
+      </a>
+
+      <a href="./paintings" aria-label="PAINTINGS">
+        <img src="landing/paintings.png" alt="PAINTINGS">
+      </a>
+
+    </div>
+
+    <div class="menu-group menu-work">
+
+      <a href="./about" aria-label="ABOUT">
+        <img src="landing/about.png" alt="ABOUT">
+      </a>
+
+      <a href="./contact" aria-label="CONTACT">
+        <img src="landing/contact.png" alt="CONTACT">
+      </a>
+
+    </div>
+
+  </nav>
+
+</section>
+```
+
   </main>
 </body>
 </html>

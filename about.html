@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -12,6 +13,52 @@
       width: 100%;
       min-height: 100%;
       margin: 0;
+    }
+
+    /* IMAGE-BASED SUBPAGE HEADER */
+
+    .subpage-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      width: 100%;
+      margin: 0 0 28px;
+      white-space: nowrap;
+    }
+
+    .subpage-back {
+      display: block;
+      line-height: 0;
+    }
+
+    .subpage-back img {
+      display: block;
+      width: auto;
+      height: 34px;
+      max-width: none;
+    }
+
+    .subpage-title {
+      display: block;
+      line-height: 0;
+    }
+
+    .subpage-title img {
+      display: block;
+      width: auto;
+      height: 34px;
+      max-width: none;
+    }
+
+    .subpage-back:hover,
+    .subpage-back:focus-visible {
+      opacity: 0.65;
+    }
+
+    .subpage-back:focus-visible {
+      outline: 2px solid var(--focus);
+      outline-offset: 4px;
     }
 
     .about-content {
@@ -48,14 +95,14 @@
         padding-top: 32px;
       }
 
-      .subpage-back,
-      .subpage-title {
-        font-size: 19.2px;
-        letter-spacing: -0.768px;
+      .subpage-header {
+        gap: 16px;
+        margin-bottom: 22px;
       }
 
-      .subpage-title {
-        margin-left: 16px;
+      .subpage-back img,
+      .subpage-title img {
+        height: 39.2px;
       }
 
       .about-content {
@@ -81,56 +128,72 @@
       }
     }
   </style>
+
 </head>
 
 <body>
+
   <main class="subpage">
 
-    <header class="subpage-header">
 
-      <a
-        class="subpage-back"
-        href="./"
-      >
-        MILOŠ ŽIVKOVIĆ
-      </a>
+<header class="subpage-header">
 
-      <span class="subpage-title">
-        ABOUT
-      </span>
+  <a
+    class="subpage-back"
+    href="./"
+    aria-label="MILOŠ ŽIVKOVIĆ"
+  >
+    <img
+      src="./landing/milos.png"
+      alt="MILOŠ ŽIVKOVIĆ"
+    >
+  </a>
 
-    </header>
+  <span
+    class="subpage-title"
+    aria-label="ABOUT"
+  >
+    <img
+      src="./landing/about.png"
+      alt="ABOUT"
+    >
+  </span>
 
-    <section class="about-content">
+</header>
 
-      <img
-        class="about-photo"
-        src="./pfp.jpeg"
-        alt=""
-      >
 
-      <p class="about-bio">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integerffffffffffffffffffffffffffffffffffffffffffffffffffffff
-        posuere, sapien vel consequat tincidunt, justo erat tincidunt
-        libero, vitae feugiat neque arcu sed lorem. Donec euismod, nibh
-        sed consequat malesuada, erat magna interdum nunc, vitae
-        pellentesque justo felis vitae ipsum. Suspendisse potenti.
-        <br><br>
-        Curabitur non magna at ipsum tincidunt feugiat. Praesent
-        consectetur, massa at facilisis tincidunt, lectus neque
-        pellentesque justo, vitae consequat erat arcu sed nulla. Aliquam
-        erat volutpat. Mauris tristique, libero non tincidunt tincidunt,
-        lorem neque malesuada justo, sed fermentum ipsum sapien vitae
-        massa.
-        <br><br>
-        Nulla facilisi. Donec vitae augue sed neque volutpat consequat.
-        Aenean vel lectus sed nisl interdum tincidunt. Phasellus
-        ullamcorper, massa vitae posuere faucibus, erat justo consequat
-        lorem, vitae tincidunt nisl neque at erat.
-      </p>
+<section class="about-content">
 
-    </section>
+  <img
+    class="about-photo"
+    src="./pfp.jpeg"
+    alt=""
+  >
+
+  <p class="about-bio">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integerffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    posuere, sapien vel consequat tincidunt, justo erat tincidunt
+    libero, vitae feugiat neque arcu sed lorem. Donec euismod, nibh
+    sed consequat malesuada, erat magna interdum nunc, vitae
+    pellentesque justo felis vitae ipsum. Suspendisse potenti.
+    <br><br>
+    Curabitur non magna at ipsum tincidunt feugiat. Praesent
+    consectetur, massa at facilisis tincidunt, lectus neque
+    pellentesque justo, vitae consequat erat arcu sed nulla. Aliquam
+    erat volutpat. Mauris tristique, libero non tincidunt tincidunt,
+    lorem neque malesuada justo, sed fermentum ipsum sapien vitae
+    massa.
+    <br><br>
+    Nulla facilisi. Donec vitae augue sed neque volutpat consequat.
+    Aenean vel lectus sed nisl interdum tincidunt. Phasellus
+    ullamcorper, massa vitae posuere faucibus, erat justo consequat
+    lorem, vitae tincidunt nisl neque at erat.
+  </p>
+
+</section>
+
 
   </main>
+
 </body>
 </html>
